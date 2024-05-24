@@ -2,9 +2,9 @@ import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import Topbar from './scenes/global/Topbar';
-import Sidebar from './scenes/global/Sidebar';
+import AdminSidebar from './scenes/global/AdminSidebar';
 import Dashboard from './scenes/dashboard';
-// import Team from './scenes/team';
+import Team from './scenes/team';
 // import Invoces from './scenes/invoces';
 // import Contacts from './scenes/contacts';
 // import Bar from './scenes/bar';
@@ -22,11 +22,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <AdminSidebar />
           <main className="content">
             <Topbar />
             <Routes>
-              <Route path="/" element={Dashboard} />
-              {/* <Route path="/team" element={Team} /> */}
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/team" element={<Team />} />
               {/* <Route path="/contacts" element={Contacts} /> */}
               {/* <Route path="/invoces" element={Invoces} /> */}
               {/* <Route path="/bar" element={Bar} /> */}
