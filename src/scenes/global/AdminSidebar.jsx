@@ -102,7 +102,7 @@ const AdminSidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/0702499771110-web-tete.jpg`}
+                  src={`../../assets/d9a1058910_50163142_elon-musk1.jpg`}
                   style={{ cursor: 'pointer', borderRadius: '50%' }}
                 />
               </Box>
