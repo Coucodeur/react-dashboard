@@ -79,7 +79,7 @@ export const mockDataTeam = [
     email: 'testroxie@gmail.com',
     age: 33,
     phone: '(444)555-3333',
-    access: 'user',
+    access: 'admin',
   },
 ];
 
