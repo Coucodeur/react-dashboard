@@ -5,11 +5,11 @@ import { mockDataTeam } from "../../data/mockDdata";
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-// import Header from '../../components/Header';
+import Header from '../../components/Header';
 
 const Team = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode)
+  const colors = tokens(theme.palette.mode);
   
   const columns = [
     {
@@ -42,20 +42,71 @@ const Team = () => {
       field: "access",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { acces }})=>{
+      cellClassName: "test-center",
+      renderCell: ({ row: { access }})=>{
         return (
-          <Box>
-            coucou
+          <Box
+            width="60%"
+            m="0 auto"
+            p="5px"
+            display="flex"
+            justifyContent="center"
+            backgroundColor={
+              access === "admin"
+                ? colors.greenAccent[600]
+                : access === "manager"
+                ? colors.greenAccent[700]
+                : colors.greenAccent[700]
+            }
+            borderRadius="4px"
+          >
+            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
+            {access === "manager" && <SecurityOutlinedIcon />}
+            {access === "user" && <LockOpenOutlinedIcon />}
+            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+              {access}
+            </Typography>
           </Box>
         )
       }
     },
   ]
   return (
-    <Box>
-      {/* <Header title="Team" subtile="Managing the Team Members" /> */}
-      <Box >
-        coucou
+    <Box m="20px">
+      <Header title="Team" subtitle="Managing the Team Members" />
+      <Box
+      m="40px 0 0 0"
+      height="75vh"
+      sx={{
+        "& .MuiDataGrid-root": {
+          border: "none",
+        },
+        "& .MuiDataGrid-cell": {
+          border: "none"
+        },
+        "& .MuiDataGrid-row": {
+          border: "none"
+        },
+        "& .name-column--cell": {
+          color: colors.greenAccent[400]
+        },
+        "& .MuiDataGrid-columnHeader":{
+          backgroundColor: colors.blueAccent[400],
+          borderBottom: "none"
+        },
+        "& .css-tgsonj": {
+          borderTop: "none"
+        },
+        "& .MuiDataGrid-footerContainer": {
+          backgroundColor: colors.blueAccent[400],
+        },
+        "& .test-center": {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }
+      }}
+      >
         <DataGrid
         rows={mockDataTeam}
         columns={columns}
