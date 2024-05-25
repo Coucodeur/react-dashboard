@@ -97,6 +97,9 @@ const Team = () => {
         "& .css-tgsonj": {
           borderTop: "none"
         },
+        "& .MuiDataGrid-virtualScroller": {
+          backgroundColor: colors.primary[400]
+        },
         "& .MuiDataGrid-footerContainer": {
           backgroundColor: colors.blueAccent[400],
         },
