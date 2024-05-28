@@ -24,7 +24,8 @@ const Contacts = () => {
       flex: 1,
       cellClassName: "name-column--cell"
     },
-    { field: "age",
+    { 
+      field: "age",
       headerName: "Age",
       type: "number",
       headerAlign: "left",
@@ -40,11 +41,25 @@ const Contacts = () => {
       headerName: "Email",
       flex: 1
     },
-    
+    {
+      field: "address",
+      headerName: "Adresse",
+      flex: 1
+    },
+    {
+      field: "city",
+      headerName: "City",
+      flex: 1
+    },
+    {
+      field: "zipCode",
+      headerName: "Zip code",
+      flex: 1
+    }
   ]
   return (
     <Box m="20px">
-      <Header title="Contacts" subtitle="Managing the contacts" />
+      <Header title="CONTACTS" subtitle="List of Contacts and features references" />
       <Box
       m="40px 0 0 0"
       height="75vh"
@@ -78,12 +93,18 @@ const Contacts = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+        },
+        "& .MuiDataGrid-toolbarContainer .MuiButton-text":{
+          color: `${colors.grey[100]} !important`,
         }
       }}
       >
         <DataGrid
         rows={mockDataContacts}
         columns={columns}
+        slots={{
+          toolbar: GridToolbar,
+        }}
         />
       </Box>
     </Box>
