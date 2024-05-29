@@ -6,7 +6,8 @@ import AdminSidebar from './scenes/global/AdminSidebar';
 import Dashboard from './scenes/dashboard';
 import Team from './scenes/team';
 import Contacts from './scenes/contacts';
-// import Invoces from './scenes/invoces';
+import Invoices from './scenes/invoices';
+// import Labo from './scenes/labo';
 // import Bar from './scenes/bar';
 // import From from './scenes/form';
 // import Line from './scenes/line';
@@ -29,13 +30,14 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
-              {/* <Route path="/invoces" element={<Invoces/>} /> */}
+              <Route path="/invoices" element={<Invoices />} />
               {/* <Route path="/bar" element={<Bar/>} /> */}
               {/* <Route path="/form" element={<From/>} /> */}
               {/* <Route path="/line" element={<Line/>} /> */}
               {/* <Route path="/pie" element={<Pie/>} /> */}
               {/* <Route path="/faq" element={<FAQ/>} /> */}
-              {/* <Route path="/geograhyfaq" element={<Geography/>} /> */}
+              {/* <Route path="/Geography" element={<Geography/>} /> */}
+              {/* <Route path="/labo" element={<Labo />} /> */}
             </Routes>
           </main>
         </div>
