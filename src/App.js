@@ -7,9 +7,9 @@ import Dashboard from './scenes/dashboard';
 import Team from './scenes/team';
 import Contacts from './scenes/contacts';
 import Invoices from './scenes/invoices';
+import From from './scenes/form';
 // import Labo from './scenes/labo';
 // import Bar from './scenes/bar';
-// import From from './scenes/form';
 // import Line from './scenes/line';
 // import Pie from './scenes/pie';
 // import FAQ from './scenes/faq';
@@ -31,8 +31,8 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<From />} />
               {/* <Route path="/bar" element={<Bar/>} /> */}
-              {/* <Route path="/form" element={<From/>} /> */}
               {/* <Route path="/line" element={<Line/>} /> */}
               {/* <Route path="/pie" element={<Pie/>} /> */}
               {/* <Route path="/faq" element={<FAQ/>} /> */}
